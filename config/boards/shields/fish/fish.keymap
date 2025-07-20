@@ -101,7 +101,7 @@
         layer_keymap {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &lt 3 H     &kp P       
+&kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &lt 3 S     &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 BSPC  &mt LCTRL RET       &mt RCTRL TAB &lt 2 SPACE 
             >;
@@ -127,10 +127,10 @@
 
         layer_mouse {
             bindings = <
-                        &kp L       &kp U       &kp F       &kp MINUS           &kp LC(Y)   &kp LC(C)   &kp BSPC    &kp LC(V)   
-&kp Q       &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp LC(Z)   &mkp MB1    &mkp MB3    &mkp MB2    &none       &none       
-            &kp Z       &kp X       &kp C       &kp V                                       &kp LC(X)   &kp LG(FSLH) &kp LC(LS(V)) &none    
-                                                &lt 4 BSPC  &mt LGUI RET        &mkp MB5    &mkp MB4    
+                        &kp L       &kp U       &kp F       &kp MINUS           &kp LC(Y)   &kp LC(C)   &kp LC(V)   &none       
+&kp Q       &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
+            &kp Z       &kp X       &kp C       &kp V                                       &kp LC(X)   &kp LC(LS(V)) &none     &kp LG(FSLH) 
+                                                &lt 4 BSPC  &mt LGUI RET        &mkp MB4    &mkp MB5    
             >;
         };
 
