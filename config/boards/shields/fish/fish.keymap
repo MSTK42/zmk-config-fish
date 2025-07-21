@@ -127,18 +127,18 @@
 
         layer_mouse {
             bindings = <
-                        &none       &mkp MSU    &none       &none               &kp LC(Y)   &kp LC(C)   &kp LC(V)   &none       
-&mo 4       &none       &mkp MSL    &none       &mkp MSR    &none               &kp LC(Z)   &mkp MB1    &mkp MB2        &none       &mkp MB3    &kp BSPC    
-            &none       &none       &mkp MSD    &none                                       &kp LC(X)   &kp LC(RS(V))   &none       &kp LG(SLASH)
+                        &none       &msc SCRL_UP    &none       &none               &kp LC(Y)   &kp LC(C)   &kp LC(V)   &none       
+&mo 4       &none       &msc SCRL_LEFT    &none       &msc SCRL_RIGHT    &none               &kp LC(Z)   &mkp MB1    &mkp MB2        &none       &mkp MB3    &kp BSPC    
+            &none       &none       &msc SCRL_DOWN    &none                                       &kp LC(X)   &kp LC(RS(V))   &none       &kp LG(SLASH)
                                                 &lt 4 BSPC  &mt LGUI RET        &mkp MB4    &mkp MB5    
             >;
         };
 
         layer_mouse2 {
             bindings = <
-                        &none       &mkp MUP    &none       &none               &none       &none       &none       &none       
-&none       &mkp MB1    &mkp MLT    &mkp MB1    &mkp MRT    &none               &none       &none       &none       &none       &none       &none       
-            &none       &none       &mkp MDN    &none                                       &none       &none       &none       &none       
+                        &none       &mmv MOVE_UP    &none       &none               &none       &none       &none       &none       
+&none       &mkp MB1    &mmv MOVE_LEFT    &mmv MB1    &mmv MOVE_RIGHT    &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &mmv MOVE_DOWN    &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
             >;
         };
