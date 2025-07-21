@@ -127,7 +127,7 @@
 
         layer_mouse {
             bindings = <
-                        &none       &mkp MSU    &none       &none               &kp LC(Y)   &kp LC(C)   &kp LC(LS(V))   &none       
+                        &none       &mkp MSU    &none       &none               &kp LC(Y)   &kp LC(C)   &kp LC(RS(V))   &none       
 &mo 4       &none       &mkp MSL    &none       &mkp MSR    &none               &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
             &none       &none       &mkp MSD    &none                                       &kp LC(X)   &none       &none       &kp LG(SLASH)
                                                 &lt 4 BSPC  &mt LGUI RET        &mkp MB4    &mkp MB5    
