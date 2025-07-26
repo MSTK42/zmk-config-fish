@@ -128,18 +128,18 @@
         layer_mouse {
             bindings = <
                         &none       &msc SCRL_UP &none      &none               &kp LC(Y)   &kp LC(C)   &kp LC(V)   &none       
-&none       &mo 4       &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &none     &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
-            &none       &none       &none       &none                                       &kp LC(X)   &kp LC(RS(V)) &none     &kp LG(SLASH) 
-                                                &lt 4 BSPC  &mt LGUI RET        &mkp MB4    &mkp MB5    
+&none       &none       &mo 4 &msc SCRL_LEFT &msc SCRL_RIGHT &none     &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
+            &none       &none       &msc SCRL_DOWN       &none                                       &kp LC(X)   &kp LC(RS(V)) &none     &kp LG(SLASH) 
+                                                &none &none        &mkp MB4    &mkp MB5    
             >;
         };
 
         layer_mouse2 {
             bindings = <
-                        &none       &mmv MOVE_UP &none      &none               &none       &none       &none       &none       
-&none       &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &none       &none       &none       &none       &none       &none       
-            &none       &none       &mkp MB1    &none                                       &none       &none       &none       &none       
-                                                &none       &none               &none       &none       
+                        &none       &mmv MOVE_UP &none      &none               &kp LC(Y)   &kp LC(C)   &kp LC(V)   &none       
+&none       &none       &none &mmv MOVE_LEFT &mmv MOVE_RIGHT &none     &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
+            &none       &none       &mmv MOVE_DOWN       &none                                       &kp LC(X)   &kp LC(RS(V)) &none     &kp LG(SLASH) 
+                                                &none &none        &mkp MB4    &mkp MB5   
             >;
         };
 
