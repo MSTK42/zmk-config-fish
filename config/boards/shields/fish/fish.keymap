@@ -10,18 +10,18 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500   // デフォルト600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20     // デフォルト10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10     // デフォルト10
 
 
 // 特殊入力の挙動を調整できる
 &mmv {
-  time-to-max-speed-ms = <800>;         // 加速完了までの時間
+  time-to-max-speed-ms = <400>;         // 加速完了までの時間
   acceleration-exponent = <1>;          // 加速曲線の強度
   delay-ms = <0>;
 };
 
 &msc {
-  time-to-max-speed-ms = <800>;
+  time-to-max-speed-ms = <500>;
   acceleration-exponent = <0>;          // スクロールは急加速せず滑らかに
   delay-ms = <0>;
 };
