@@ -46,7 +46,6 @@
     };
 
     macros {
-    macros {
         ann_macro: ann_macro {
             compatible = "zmk,behavior-macro";
             label = "ANN";
