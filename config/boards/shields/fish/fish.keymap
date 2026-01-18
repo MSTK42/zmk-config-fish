@@ -108,7 +108,7 @@
 
         combo_psw {
             key-positions = <8 19>;
-            bindings = <&psw>;
+            bindings = <&psw_macro>;
         };
     };
     
