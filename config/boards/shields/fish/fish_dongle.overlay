@@ -4,6 +4,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zmk,matrix-transform = &default_transform;
         zmk,physical-layout = &physical_layout0;
     };
 
@@ -28,5 +29,6 @@
 };
 
 &physical_layout0 {
+    kscan = <&mock_kscan>;
     transform = <&default_transform>;
 };
