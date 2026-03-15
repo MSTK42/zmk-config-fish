@@ -9,3 +9,9 @@ config SHIELD_FISH_RIGHT
 
 config SHIELD_FISH_DONGLE
     def_bool $(shields_list_contains,fish_dongle)
+
+config SHIELD_FISH_LEFT_DONGLE
+    def_bool $(shields_list_contains,fish_left_dongle)
+
+config SHIELD_FISH_RIGHT_DONGLE
+    def_bool $(shields_list_contains,fish_right_dongle)
