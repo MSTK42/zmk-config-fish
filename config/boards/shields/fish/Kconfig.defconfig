@@ -20,3 +20,27 @@ config ZMK_KEYBOARD_NAME
     default "FISH"
 
 endif
+
+if SHIELD_FISH_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "FISH"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+# まずは左右だけなので 2
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# 2 peripherals + 5 BT profiles = 7
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif
