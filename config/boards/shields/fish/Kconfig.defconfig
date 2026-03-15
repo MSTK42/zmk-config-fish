@@ -1,17 +1,13 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-
 if SHIELD_FISH_LEFT
-# 右親機にしたければ "if SHIELD_FISH_RIGHT" にする
-
+# 通常運用: 左がcentral
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-
 endif
 
-
-if SHIELD_FISH_LEFT || SHIELD_FISH_RIGHT
+if SHIELD_FISH_LEFT || SHIELD_FISH_RIGHT || SHIELD_FISH_LEFT_DONGLE || SHIELD_FISH_RIGHT_DONGLE
 
 config ZMK_SPLIT
     default y
@@ -32,11 +28,11 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT
     default y
 
-# まずは左右だけなので 2
+# 左右だけなので 2
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
 
-# 2 peripherals + 5 BT profiles = 7
+# 2 peripherals + ホスト接続用
 config BT_MAX_CONN
     default 7
 
