@@ -30,13 +30,13 @@ config ZMK_SPLIT
 
 # 左右だけなので 2
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-    default 2
+    default 3
 
 # 2 peripherals + ホスト接続用
 config BT_MAX_CONN
-    default 7
+    default 8
 
 config BT_MAX_PAIRED
-    default 7
+    default 8
 
 endif
