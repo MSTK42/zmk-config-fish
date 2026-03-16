@@ -113,11 +113,6 @@
             bindings = <&psw_macro>;
         };
 
-        combo_tog_1 {
-            key-positions = <0 8>;
-            bindings = <&tog 1>;
-        };
-
         combo_xn {
             key-positions = <16 17>;
             bindings = <&xn>;
@@ -138,6 +133,7 @@
 &kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S     &kp H       &lt 5 P     
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 BSPC  &mt LCTRL RET       &mt RCTRL TAB &lt 2 SPACE 
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -147,6 +143,7 @@
 &kp TILDE   &kp N0      &mt LGUI N4 &mt LALT N5 &mt LSHFT N6 &kp DOT            &kp UNDER   &mt RSHFT PLUS &mt RALT MINUS &mt RGUI STAR &kp FSLH &kp PRCNT 
             &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp COLON   &kp SEMI    
                                                 &kp BSPC    &trans              &trans      &lt 6 SPACE 
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -155,7 +152,8 @@
                         &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp C_VOL_UP &kp ESC    &kp UP      &kp CAPS    
 &kp AT      &kp HASH    &mt LCTRL LPAR &mt LALT SQT &mt LSHFT RPAR &kp PIPE     &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &kp PSCRN  
             &kp BSLH    &kp LBRC    &kp GRAVE   &kp RBRC                                    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_BRI_DN 
-                                                &lt 6 BSPC  &trans              &trans      &none       
+                                                &lt 6 BSPC  &trans              &trans      &none 
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -164,7 +162,8 @@
                         &none       &msc SCRL_UP &none      &none               &kp LC(Y)   &kp LC(C)   &kp LC(V)   &none       
 &none       &none       &mo 4       &msc SCRL_LEFT &msc SCRL_RIGHT &none        &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
             &none       &none       &msc SCRL_DOWN &none                                    &kp LC(LA(V)) &kp LC(RS(V)) &none     &kp LG(SLASH) 
-                                                &none       &none               &mkp MB4    &mkp MB5    
+                                                &none       &none               &mkp MB4    &mkp MB5  
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -174,6 +173,7 @@
 &none       &none       &none       &mmv MOVE_LEFT &mmv MOVE_RIGHT &none        &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
             &none       &none       &mmv MOVE_DOWN &none                                    &kp LC(LA(V)) &kp LC(RS(V)) &none     &kp LG(SLASH) 
                                                 &none       &none               &mkp MB4    &mkp MB5    
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -183,6 +183,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -192,6 +193,7 @@
 &kp F1      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F6          &kp F7      &kp DEL     &kp END     &kp PG_DN   &kp K_APP   &kp F12     
             &kp F2      &kp F3      &kp F4      &kp F5                                      &kp F8      &kp F9      &kp F10     &kp F11     
                                                 &none       &none               &none       &none       
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -201,6 +203,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -209,7 +212,8 @@
                         &none       &none       &none       &none               &none       &none       &none       &none       
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
-                                                &none       &none               &none       &none       
+                                                &none       &none               &none       &none    
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
 
@@ -219,6 +223,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
+&lt 10 MB3  &mkp MB2  &mkp MB1
             >;
         };
     };
