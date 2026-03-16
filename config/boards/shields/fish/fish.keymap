@@ -43,6 +43,13 @@
     // 独自の入力を定義できる（上級者向け）
 
     behaviors {
+        lt_mkp: lt_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_MKP";
+            bindings = <&mo>, <&mkp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -87,6 +94,7 @@
     // 8  9 10 11 12 13    14 15 16 17 18 19
     //   20 21 22 23          24 25 26 27
     //            28 29    30 31
+    //32 33 34
 
     combos {
         compatible = "zmk,combos";
@@ -133,7 +141,7 @@
 &kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S     &kp H       &lt 5 P     
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 BSPC  &mt LCTRL RET       &mt RCTRL TAB &lt 2 SPACE 
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -143,7 +151,7 @@
 &kp TILDE   &kp N0      &mt LGUI N4 &mt LALT N5 &mt LSHFT N6 &kp DOT            &kp UNDER   &mt RSHFT PLUS &mt RALT MINUS &mt RGUI STAR &kp FSLH &kp PRCNT 
             &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp COLON   &kp SEMI    
                                                 &kp BSPC    &trans              &trans      &lt 6 SPACE 
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -153,7 +161,7 @@
 &kp AT      &kp HASH    &mt LCTRL LPAR &mt LALT SQT &mt LSHFT RPAR &kp PIPE     &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &kp PSCRN  
             &kp BSLH    &kp LBRC    &kp GRAVE   &kp RBRC                                    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_BRI_DN 
                                                 &lt 6 BSPC  &trans              &trans      &none 
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -163,7 +171,7 @@
 &none       &none       &mo 4       &msc SCRL_LEFT &msc SCRL_RIGHT &none        &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
             &none       &none       &msc SCRL_DOWN &none                                    &kp LC(LA(V)) &kp LC(RS(V)) &none     &kp LG(SLASH) 
                                                 &none       &none               &mkp MB4    &mkp MB5  
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -173,7 +181,7 @@
 &none       &none       &none       &mmv MOVE_LEFT &mmv MOVE_RIGHT &none        &kp LC(Z)   &mkp MB1    &mkp MB2    &none       &mkp MB3    &kp BSPC    
             &none       &none       &mmv MOVE_DOWN &none                                    &kp LC(LA(V)) &kp LC(RS(V)) &none     &kp LG(SLASH) 
                                                 &none       &none               &mkp MB4    &mkp MB5    
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -183,7 +191,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -193,7 +201,7 @@
 &kp F1      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F6          &kp F7      &kp DEL     &kp END     &kp PG_DN   &kp K_APP   &kp F12     
             &kp F2      &kp F3      &kp F4      &kp F5                                      &kp F8      &kp F9      &kp F10     &kp F11     
                                                 &none       &none               &none       &none       
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -203,7 +211,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -213,7 +221,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none    
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
 
@@ -223,7 +231,7 @@
 &none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
             &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
-&lt 10 MB3  &mkp MB2  &mkp MB1
+&lt_mkp 10 MB3   &mkp MB2   &mkp MB1
             >;
         };
     };
