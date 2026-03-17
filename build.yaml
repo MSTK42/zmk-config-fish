@@ -32,5 +32,6 @@ include:
 
   - board: xiao_ble//zmk
     shield: settings_reset
-  
-  
+
+  - board: xiao_ble//zmk
+    shield: fish_nape_dongle
