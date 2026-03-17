@@ -7,7 +7,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
     default y
 endif
 
-if SHIELD_FISH_LEFT || SHIELD_FISH_RIGHT || SHIELD_FISH_LEFT_DONGLE || SHIELD_FISH_RIGHT_DONGLE
+if SHIELD_FISH_LEFT || SHIELD_FISH_RIGHT || SHIELD_FISH_LEFT_DONGLE || SHIELD_FISH_RIGHT_DONGLE || SHIELD_FISH_NAPE_DONGLE
 
 config ZMK_SPLIT
     default y
@@ -28,11 +28,9 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT
     default y
 
-# 左右だけなので 2
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 3
 
-# 2 peripherals + ホスト接続用
 config BT_MAX_CONN
     default 8
 
