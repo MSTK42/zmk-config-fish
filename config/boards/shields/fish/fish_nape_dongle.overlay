@@ -21,10 +21,6 @@
     status = "disabled";
 };
 
-&physical_layout0 {
-    kscan = <&nape_kscan>;
-};
-
 &default_transform {
     col-offset = <8>;
 };
