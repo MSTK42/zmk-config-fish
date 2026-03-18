@@ -106,6 +106,12 @@
             bindings = <&kp LANG2>;
         };
 
+        combo_scroll_hold {
+            key-positions = <33 34>;
+            bindings = <&mo 9>;
+            slow-release;
+        };
+
         combo_lang1 {
             key-positions = <15 16>;
             bindings = <&kp LANG1>;
