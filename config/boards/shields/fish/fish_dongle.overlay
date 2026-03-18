@@ -23,4 +23,13 @@
 
 &tb_listener {
     status = "okay";
+
+    scroller {
+        layers = <10>;
+        input-processors =
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_wheel_scaler 1 24>,
+            <&zip_hwheel_scaler 1 24>;
+    };
 };
