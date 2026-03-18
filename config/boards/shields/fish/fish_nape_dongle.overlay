@@ -17,6 +17,10 @@
     };
 };
 
+&kscan0 {
+    status = "disabled";
+};
+
 &default_transform {
     col-offset = <8>;
 };
