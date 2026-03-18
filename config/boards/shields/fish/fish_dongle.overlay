@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "fish-layouts.dtsi"
+#include "fish.dtsi"
 #include "split_input.dtsi"
 
 / {
@@ -17,6 +17,12 @@
     };
 };
 
+/* fish.dtsi 由来の matrix kscan はドングルでは使わない */
+&kscan0 {
+    status = "disabled";
+};
+
+/* whole keyboard layout は mock_kscan を使う */
 &physical_layout0 {
     kscan = <&mock_kscan>;
     transform = <&default_transform>;
