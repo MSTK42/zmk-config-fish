@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
+
 
 #include "fish.dtsi"
 #include "split_input.dtsi"
@@ -43,9 +45,23 @@
     status = "disabled";
 };
 
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    min-factor = <1100>;          /* 低速時 1.1x */
+    max-factor = <2200>;          /* 高速時 2.2x */
+    speed-threshold = <1400>;     /* ここから加速開始 */
+    speed-max = <6500>;           /* ここで最大加速 */
+    acceleration-exponent = <1>;  /* 線形 */
+    track-remainders;
+};
+
+
 &tb_listener {
     status = "okay";
-
+    /* 通常時カーソル移動に加速をかける */
+    input-processors = <
+        &pointer_accel
+    >;
     scroller {
         layers = <9>;
         input-processors =
