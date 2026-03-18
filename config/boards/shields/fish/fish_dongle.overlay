@@ -1,9 +1,10 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "fish.dtsi"
-#include "split_input.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
 
+#include "fish.dtsi"
+#include "split_input.dtsi"
 
 / {
     chosen {
@@ -17,6 +18,24 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+
+    input_processors {
+        zip_wheel_scaler: zip_wheel_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_WHEEL>;
+            track-remainders;
+        };
+
+        zip_hwheel_scaler: zip_hwheel_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_HWHEEL>;
+            track-remainders;
+        };
     };
 };
 
@@ -34,25 +53,5 @@
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_wheel_scaler 1 24>,
             <&zip_hwheel_scaler 1 24>;
-    };
-};
-
-/ {
-    input_processors {
-        zip_wheel_scaler: zip_wheel_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_WHEEL>;
-            track-remainders;
-        };
-
-        zip_hwheel_scaler: zip_hwheel_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_HWHEEL>;
-            track-remainders;
-        };
     };
 };
