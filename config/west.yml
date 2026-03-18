@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: carrefinho
       url-base: https://github.com/carrefinho
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov   
       
   projects:
     - name: zmk
@@ -14,6 +16,10 @@ manifest:
     - name: prospector-zmk-module
       remote: carrefinho
       revision: feat/new-status-screens
+
+    - name: zmk-pointing-acceleration
+      remote: oleksandrmaslov
+      revision: main
       
   self:
     path: config
