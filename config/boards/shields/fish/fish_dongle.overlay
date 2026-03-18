@@ -47,7 +47,7 @@
     status = "okay";
 
     scroller {
-        layers = <10>;
+        layers = <9>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
