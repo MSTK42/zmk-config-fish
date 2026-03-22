@@ -5,7 +5,11 @@ manifest:
     - name: carrefinho
       url-base: https://github.com/carrefinho
     - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov   
+      url-base: https://github.com/oleksandrmaslov
+    - name: ssbb
+      url-base: https://github.com/ssbb
+    - name: kot149
+      url-base: https://github.com/kot149
       
   projects:
     - name: zmk
@@ -20,6 +24,16 @@ manifest:
     - name: zmk-pointing-acceleration
       remote: oleksandrmaslov
       revision: main
+
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
+      path: modules/zmk-listeners
+
+    - name: zmk-mouse-gesture
+      remote: kot149
+      revision: v1
+      path: modules/zmk-mouse-gesture
       
   self:
     path: config
