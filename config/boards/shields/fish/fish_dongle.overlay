@@ -83,9 +83,9 @@
     };
 
     /* 将来の拡張用 */
-    close_tab {
+    reopen_tab {
         pattern = <GESTURE_DOWN GESTURE_RIGHT>;
-        bindings = <&kp LC(A)>;
+        bindings = <&kp LC(LS(T))>;
     };
 
     close_tab {
