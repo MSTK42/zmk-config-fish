@@ -73,6 +73,8 @@
         res-cpi = <800>;
         invert-x;
         invert-y;
+
+        force-awake;
     };
 };
 
