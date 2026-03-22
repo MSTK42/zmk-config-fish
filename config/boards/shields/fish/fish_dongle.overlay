@@ -1,9 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 #include <behaviors/input_gestures_accel.dtsi>
-
+#include <mouse-gesture.dtsi>
 
 #include "fish.dtsi"
 #include "split_input.dtsi"
@@ -55,13 +57,60 @@
     track-remainders;
 };
 
+&zip_mouse_gesture {
+    stroke-size = <150>;
+    enable-eager-mode;
+    idle-timeout-ms = <200>;
+
+    browser_back {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&mkp MB4>;
+    };
+
+    browser_forward {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&mkp MB5>;
+    };
+
+    copy_text {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LC(C)>;
+    };
+
+    paste_text {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LC(V)>;
+    };
+
+    /* 将来の拡張用 */
+    close_tab {
+        pattern = <GESTURE_DOWN GESTURE_RIGHT>;
+        bindings = <&kp LC(A)>;
+    };
+
+    close_tab {
+        pattern = <GESTURE_DOWN GESTURE_LEFT>;
+        bindings = <&kp LC(W)>;
+    };
+};
 
 &tb_listener {
     status = "okay";
-    /* 通常時カーソル移動に加速をかける */
+
+    /* 通常時は今まで通りカーソル加速 */
     input-processors = <
         &pointer_accel
     >;
+
+    /* 32長押し中の layer 8 だけ gesture 専用にする */
+    gesturer {
+        layers = <8>;
+        input-processors = <
+            &zip_mouse_gesture
+        >;
+    };
+
+    /* 既存のスクロールレイヤー */
     scroller {
         layers = <9>;
         input-processors =
