@@ -41,6 +41,15 @@
             track-remainders;
         };
     };
+
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+
+        mouse_gesture_layer {
+            layers = <8>;
+            bindings = <&mouse_gesture_on &mouse_gesture_off>;
+        };
+    };
 };
 
 &kscan0 {
@@ -49,11 +58,11 @@
 
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
-    min-factor = <1100>;          /* 低速時 1.1x */
-    max-factor = <2200>;          /* 高速時 2.2x */
-    speed-threshold = <1400>;     /* ここから加速開始 */
-    speed-max = <6500>;           /* ここで最大加速 */
-    acceleration-exponent = <1>;  /* 線形 */
+    min-factor = <1100>;
+    max-factor = <2200>;
+    speed-threshold = <1400>;
+    speed-max = <6500>;
+    acceleration-exponent = <1>;
     track-remainders;
 };
 
@@ -82,7 +91,6 @@
         bindings = <&kp LC(V)>;
     };
 
-    /* 将来の拡張用 */
     reopen_tab {
         pattern = <GESTURE_DOWN GESTURE_RIGHT>;
         bindings = <&kp LC(LS(T))>;
@@ -97,20 +105,13 @@
 &tb_listener {
     status = "okay";
 
-    /* 通常時は今まで通りカーソル加速 */
-    input-processors = <
-        &pointer_accel
-    >;
+    input-processors = <&pointer_accel>;
 
-    /* 32長押し中の layer 8 だけ gesture 専用にする */
     gesturer {
         layers = <8>;
-        input-processors = <
-            &zip_mouse_gesture
-        >;
+        input-processors = <&zip_mouse_gesture>;
     };
 
-    /* 既存のスクロールレイヤー */
     scroller {
         layers = <9>;
         input-processors =
