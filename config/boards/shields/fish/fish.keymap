@@ -13,11 +13,6 @@
 
 // 特殊入力の挙動を調整できる
 
-&kscan {
-    debounce-press-ms = <3>;
-    debounce-release-ms = <8>;
-};
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <225>;
